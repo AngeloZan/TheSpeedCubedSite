@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/css/website.css' %}">
+{% endblock head %}
+
+{% block content %}
+<div class="nada-por-aqui-container">
+    <section>
+        <div>
+            <h1>Nada por aqui ainda! Em breve teremos conteúdo para você.</h1>
+            <p>Enquanto isso...</p>
+            <p>Você já sabe <a href="{% url 'aprender' %}">resolver o cubo mágico</a>?</p>
+        </div>
+    </section>
+</div>
+{% endblock content %}

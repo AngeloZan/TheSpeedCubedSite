@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/css/website.css' %}">
+    <title>Feedback - TheSpeedCubed</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="feedback-container">
+        <section>
+            <div>
+                <h1>Sua mensagem foi enviada! :D</h1>
+                <figure>
+                    <img src="{% static 'website/img/feedback/email-icon.png' %}" alt="Email">
+                </figure>
+                <p>Obrigado pelo feedback.</p>
+            </div>
+        </section>
+    </div>
+{% endblock content %}
+

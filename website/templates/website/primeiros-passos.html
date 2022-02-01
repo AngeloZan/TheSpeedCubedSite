@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/css/website.css' %}">
+    <title>Tutorial - TheSpeedCubed</title>
+    <meta name="description" content="Um tutorial simples, mas completo. Seguindo esses passos, qualquer pessoa é capaz de resolver o cubo mágico.">
+{% endblock head %}
+
+
+{% block content %}
+<div class="primeiros-passos-container">
+    <div class="conteudo">
+        <h1>Primeiros Passos</h1>
+        <p>Começaremos escolhendo uma cor base. Pode ser qualquer uma das seis cores, mas é muito comum que se utilize a cor branca, por isso será ela que escolheremos nesse tutorial.</p><br>
+        <p>Para evitar confusões, vamos esclarecer a nomenclatura utilizada durante o tutorial. Uma peça do cubo pode possuir um adesivo, dois adesivos, ou três adesivos. Chamaremos cada tipo de peça da seguinte forma:</p>
+        
+        <div class="tipo_de_peca">
+            <div class="text">
+                <p><strong>Peças de centro</strong>: peças que possuem apenas uma cor</p>
+            </div>
+            <figure>
+                <img src="{% static 'website/img/primeiros-passos/cubo-centros.png' %}" alt="Peças de Centro">
+            </figure>
+        </div>
+        <div class="tipo_de_peca">
+            <div class="text">
+                <p><strong>Peças de meio</strong>: peças que possuem duas cores</p>
+            </div>
+            <figure>
+                <img src="{% static 'website/img/primeiros-passos/cubo-meios.png' %}" alt="Peças de Meio">
+            </figure>
+        </div>
+        <div class="tipo_de_peca" id="ultimo_tipo_de_peca">
+            <div class="text">
+                <p><strong>Peças de quina</strong>: peças que possuem três cores</p>
+            </div>
+            <figure>
+                <img src="{% static 'website/img/primeiros-passos/cubo-quinas.png' %}" alt="Peças de Quina">
+            </figure>
+        </div>
+        
+        <p>Uma observação importante: olhe para as peças de centro, essas peças não mudam suas posições, elas são fixas. Isso significa que as peças de centro branca e amarela sempre estarão em lados opostos do cubo, por exemplo. Mas isso também significa que o lado que possui o centro branco será o lado branco.</p><br>
+        <p>Parece óbvio, mas é importante que se tenha essa noção inicial.</p><br>
+        <p>Sabendo disso, você pode seguir em frente.</p>
+        
+        <div id="link_primeira_camada"><a href="{% url 'primeira_camada' %}">Primeira Camada ></a></div>
+
+    </div>
+    <div class="vertical_line"></div>
+</div>
+{% endblock content %}

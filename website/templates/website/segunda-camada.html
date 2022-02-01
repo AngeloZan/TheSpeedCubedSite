@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/css/website.css' %}">
+    <title>Tutorial - TheSpeedCubed</title>
+    <meta name="description" content="Um tutorial simples, mas completo. Seguindo esses passos, qualquer pessoa é capaz de resolver o cubo mágico.">
+{% endblock head %}
+
+{% block content %}
+
+<div class="segunda-camada-container">
+    <div class="conteudo">
+        <div class="text-and-image">
+            <div class="text">
+                <h1>Segunda Camada</h1>
+                <p>Vamos começar localizando uma peça de meio que não possui a cor branca nem a amarela. Dê preferência às peças que estiverem na terceira camada, se não restar nenhuma na terceira camada, observe o quadro no final dessa página. Lembrando que você deve manter a face branca virada para baixo.</p><br>
+                <p>O ideal é que você escolha uma peça em alguma dessas posições em cinza escuro.</p><br>
+            </div>
+                
+            <figure id="img_quinas_cima" class="cube_figure" style="margin-top: 0; margin-bottom: 0;">
+                <img src="{% static 'website/img/segunda-camada/quinas-cima.png' %}" alt="Quinas de cima" width="100%" class="cube_img">
+            </figure>
+            
+        </div>
+
+        <p>Agora, alinhe a peça que você escolheu com um centro. Basta girar a face superior até que a peça fique alinhada com um centro:</p>
+        
+        <div class="imagens">
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/segunda-camada/peca-meio-desalinhada.png' %}" alt="Peça de meio desalinhada" class="cube_img" width="100%">
+                <figcaption>Peça não alinhada</figcaption>
+            </figure>
+        
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/segunda-camada/peca-meio-alinhada.png' %}" alt="Peça de meio alinhada" class="cube_img" width="100%">
+                <figcaption>Peça alinhada</figcaption>
+            </figure>
+        </div>
+
+        <p>Agora, segure o cubo de forma que a cor que você alinhou fique para frente.</p>
+
+        <figure class="cube_figure">
+            <img src="{% static 'website/img/segunda-camada/cor-alinhada-na-frente.png' %}" alt="Cor alinhada na frente" class="cube_img" width="100%">
+        </figure>
+
+        <p>Olhe para a cor de cima da peça em questão, e veja se a face dessa cor está na esquerda ou na direita do cubo.</p>
+
+        <div class="imagens">
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/segunda-camada/cor-na-esquerda.png' %}" alt="Cor na esquerda" class="cube_img" width="100%">
+                <figcaption>Nesse caso, a cor de cima da peça de meio está no lado esquerdo.</figcaption>
+            </figure>
+
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/segunda-camada/cor-na-direita.png' %}" alt="Cor na direita" class="cube_img" width="100%">
+                <figcaption>Aqui está um exemplo em que a cor de cima da peça está no lado direito.</figcaption>
+            </figure>
+        </div>
+
+        <div id="se_estiver_na_esquerda">
+            <h3>Esquerda</h3>
+            <p>Se a face estiver na esquerda, siga as instruções desse quadro. Se estiver na direita, pule para o próximo quadro.</p>
+
+            <div class="varias_imagens">
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-esquerda-1.png' %}" alt="Sequência esquerda 1" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-esquerda-2.png' %}" alt="Sequência esquerda 2" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-esquerda-3.png' %}" alt="Sequência esquerda 3" class="cube_img" width="100%"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-esquerda-4.png' %}" alt="Sequência esquerda 4" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-esquerda-5.png' %}" alt="Sequência esquerda 5" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-esquerda-6.png' %}" alt="Sequência esquerda 6" class="cube_img" width="100%"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-esquerda-7.png' %}" alt="Sequência esquerda 7" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-esquerda-8.png' %}" alt="Sequência esquerda 8" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure">
+                        <img src="{% static 'website/img/segunda-camada/seq-esquerda-9.png' %}" alt="Sequência esquerda 9" class="cube_img" width="100%">
+                        <figcaption>Pronto</figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+
+        </div>
+        <div id="se_estiver_na_direita">
+            <h3>Direita</h3>
+            <p>Se a face estiver na direita, siga as instruções desse quadro.</p>
+
+            <div class="varias_imagens">
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-direita-1.png' %}" alt="Sequência direita 1" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-direita-2.png' %}" alt="Sequência direita 2" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-direita-3.png' %}" alt="Sequência direita 3" class="cube_img" width="100%"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-direita-4.png' %}" alt="Sequência direita 4" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-direita-5.png' %}" alt="Sequência direita 5" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-direita-6.png' %}" alt="Sequência direita 6" class="cube_img" width="100%"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-direita-7.png' %}" alt="Sequência direita 7" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/seq-direita-8.png' %}" alt="Sequência direita 8" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure">
+                        <img src="{% static 'website/img/segunda-camada/seq-direita-9.png' %}" alt="Sequência direita 9" class="cube_img" width="100%">
+                        <figcaption>Pronto</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div id="meio_na_segunda_camada">
+            <h3>E se não houver nenhuma peça de meio que não possui nem branco nem amarelo na terceira camada?</h3>
+            <p>Nesse caso localize uma peça de meio que esteja na segunda camada e que não esteja resolvida. Note que uma peça pode estar em seu lugar mas não estar resolvida, como na segunda imagem abaixo.</p>
+
+            <div class="imagens" id="imagens_maiores">
+                <figure class="cube_figure">
+                    <img src="{% static 'website/img/segunda-camada/meio-na-segunda-camada.png' %}" alt="Meio na segunda camada" class="cube_img" width="100%">
+                    <figcaption>Exemplo de peça de meio não resolvida, na segunda camada</figcaption>
+                </figure>
+
+                <figure class="cube_figure">
+                    <img src="{% static 'website/img/segunda-camada/meio-flipado.png' %}" alt="Meio invertido" class="cube_img" width="100%">
+                    <figcaption>Peça de meio no lugar correto, mas não resolvida</figcaption>
+                </figure>
+            </div>
+
+            <p>A segunda situação é só um caso particular da primeira, o procedimento mostrado nesse quadro funciona para ambas.</p><br>
+            <p>O que nós vamos fazer é simples, vamos encaixar uma peça de meio amarela no lugar dessa peça, para forçar a peça que queremos a sair da segunda camada e ir para a terceira. Faça a sequência (obviamente, é a mesma sequência já mostrada acima):</p>
+
+            <div class="varias_imagens">
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/subir-meio-1.png' %}" alt="Sequência parte 1" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/subir-meio-2.png' %}" alt="Sequência parte 2" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/subir-meio-3.png' %}" alt="Sequência parte 3" class="cube_img" width="100%"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/subir-meio-4.png' %}" alt="Sequência parte 4" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/subir-meio-5.png' %}" alt="Sequência parte 5" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/subir-meio-6.png' %}" alt="Sequência parte 6" class="cube_img" width="100%"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/subir-meio-7.png' %}" alt="Sequência parte 7" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/subir-meio-8.png' %}" alt="Sequência parte 8" class="cube_img" width="100%"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/segunda-camada/subir-meio-9.png' %}" alt="Sequência parte 9" class="cube_img" width="100%"></figure>
+                </div>
+            </div>
+
+            <p>Pronto! Agora a peça de meio (nesse caso, a peça azul e vermelha) está na terceira camada do cubo. E você já sabe o que fazer quando ela está na terceira camada.</p>
+        </div>
+        <p>Repita esse processo para cada uma das peças de meio que não possuem nem branco e nem amarelo, e você terá terminado a segunda camada.</p>
+        <figure class='cube_figure'>
+            <img src="{% static 'website/img/segunda-camada/f2l-pronto.png' %}" alt="Segunda camada concluída" class="cube_img" width="100%">
+            <figcaption>Ao terminar a segunda camada, seu cubo deve estar dessa forma.</figcaption>
+        </figure>
+        <div id="link_terceira_camada"><a href="{% url 'terceira_camada' %}">Terceira Camada ></a></div>
+    </div>
+    <div class="vertical_line"></div>
+</div>
+{% endblock content %}

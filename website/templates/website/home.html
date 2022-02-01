@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/css/website.css' %}">
+    <title>TheSpeedCubed - Aprenda a montar o cubo mágico</title>
+    <meta name="description" content="TheSpeedCubed é um site sobre o cubo mágico, o quebra-cabeça mais famoso da história. Aqui você aprenderá não só a resolvê-lo, mas a resolvê-lo o mais rápido possível.">
+{% endblock head %}
+
+{% block content %}
+
+<div class="home-container">
+    <div class="container" id='container_1'>
+        <div class="text_over_bg text_over_bg_right" id="container_1_text">
+            <h1>Quer aprender a resolver o cubo mágico?</h1>
+            <p>Se você já passou horas de sua vida tentando, mas nunca conseguiu resolver o mais famoso quebra-cabeça do mundo, essa é a sua chance! Aqui você seguirá um tutorial simples (mas detalhado), e com alguma prática estará montando o cubo sem muita dificuldade.</p>
+        </div>
+        <div class="scrolldown">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="container" id="container_2">
+        <div class="text" id="container_2_text">
+            <h1>O brinquedo mais vendido da história</h1>
+            <p>O cubo mágico foi criado por Erno Rubik, no fim da década de 70, mas o seu sucesso se deu ao longo dos anos 80, quando se tornou uma verdadeira febre.</p><br>
+            <p>Na época não existia internet, o que tornava o desafio ainda mais difícil. Hoje em dia é possível encontrar facilmente tutoriais na internet, mas o brinquedo está longe de perder a graça: o desafio é se tornar cada vez mais rápido.</p>
+        </div>
+        <figure id="erno_figure">
+            <img src="{% static 'website/img/home/erno-rubik.jpg' %}" alt="Erno Rubik" id="erno_image">
+            <figcaption>Erno Rubik</figcaption>
+        </figure>
+    </div>
+
+    <div class="container" id='container_3'>
+        <div class="text_over_bg text_over_bg_left" id="container_3_text">
+            <h1>Speedcubing</h1>
+            <p>Já sabe montar o cubo, mas quer ficar mais rápido para impressionar ainda mais seus amigos, meros mortais?</p><br>
+            <p>Se sua resposta for <span>SIM</span>, você está no lugar certo. Na aba <a href="{% url 'avancado' %}">Avançado</a>, você encontrará conteúdo direcionado para quem quer resolver o quebra-cabeça no menor tempo possível.</p>
+        </div>
+    </div>
+
+    <div class="container" id="container_4">
+        <figure id="feliks_figure">
+            <img src="{% static 'website/img/home/feliks.jpg' %}" alt="Feliks Zemdegs" id="feliks_image">
+            <figcaption>Feliks Zemdegs</figcaption>
+        </figure>
+        <div class="text" id="container_4_text">
+            <h1>4.22 segundos!!!</h1>
+            <p>Difícil acreditar, né? Mas é verdade.</p><br>
+            <p>Os melhores speedcubers do mundo são capazes de resolver o cubo em menos de 7 segundos. E pra eles não é tão incomum resolver em menos de 5 (cinco!) segundos.</p><br>
+            <p>Esse na foto (com jaqueta preta e detalhe azul) é o australiano Feliks Zemdegs, um dos speedcubers mais famosos e respeitados do mundo.</p>
+        </div>
+    </div>
+
+    <div class="container" id="container_5">
+        <div class="text_over_bg text_over_bg_left" id="container_5_text">
+            <h1>Benefícios</h1>
+            <p>Além de ser um hobby muito divertido, o cubo mágico ainda traz diversos benefícios para a mente. Ao praticar e aprender algoritmos, você melhora a sua memória, seus reflexos e a sua capacidade de resolver problemas.</p><br>
+            <p>Na aba <a href="{% url 'sobre_o_cubo_magico' %}">Sobre o cubo mágico</a> você pode ler mais sobre esses benefícios.</p>
+        </div>
+    </div>
+
+    <div class="container" id="container_6">
+        <div class="text" id="container_6_text">
+            <h1>Por que não?</h1>
+            <p>Se você se interessou e quer aprender, então não tem por que esperar! Tire aquele cubo empoeirado da sua gaveta porque está na hora de <a href="{% url 'aprender' %}">aprender a resolvê-lo.</a> Será no mínimo uma habilidade super legal que você terá.</p><br>
+            <p>E o melhor: não será difícil! Acredite, você não terá dificuldade em aprender. Com umas duas semanas treinando alguns minutos por dia, você estará provavelmente resolvendo o cubo em menos de um minuto.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

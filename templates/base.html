@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="{% static 'css/base-style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="7dbUWyIeEqEXu0JfBsNvMuSe_Qi-V5LujQDlj-5lfZ8" />
+    <script data-ad-client="ca-pub-5829642271171226" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    {% block head %}
+
+    {% endblock head %}
+</head>
+<body>
+    {% include 'snippets/header.html' %}
+    <div id="container_body">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+    {% include 'snippets/footer.html' %}
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/css/website.css' %}">
+    <title>Tutorial - TheSpeedCubed</title>
+    <meta name="description" content="Um tutorial simples, mas completo. Seguindo esses passos, qualquer pessoa é capaz de resolver o cubo mágico.">
+{% endblock head %}
+
+{% block content %}
+<div class="primeira-camada-container">
+    <div class="conteudo">        
+        <h1>Primeira Camada</h1>
+        <div class="text-and-image">
+            <div class="text">
+                <h2>Etapa 1</h2>
+                <p>A nossa primeira etapa consiste em colocar todas as peças de meio que possuem a cor branca em torno do meio amarelo, de forma que a parte branca da peça de meio fique ao lado do centro amarelo, como na figura ao lado.</p><br>
+                <p>Essa primeira parte é a única que não tem uma fórmula que sempre funcionará, mas ela também é a parte mais fácil. Você deve encontrar uma peça branca de cada vez e colocá-la ao lado do centro amarelo. A única questão é tomar cuidado a partir da segunda peça, para que você não retire do lugar uma que já foi colocada.</p>
+            </div>
+                
+            <figure id="figure_etapa_um_primeira_camada" class="cube_figure">
+                <img src="{% static 'website/img/primeira-camada/etapa-um-primeira-camada.png' %}" alt="Etapa 1" class="cubo_img" id="etapa_1_img" width="100%">
+            </figure>
+        </div>
+
+        <h2>Etapa 2</h2>
+        <p>Nossa segunda etapa é alinhar a peça de meio branca com seu respectivo centro (como na imagem), e então descer essa peça de forma que ela fique ao lado do centro branco.</p>
+
+        <div class="imagens">
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/primeira-camada/etapa-dois-primeira-camada1.png' %}" alt="Alinhando" class="cubo_img" width="100%">
+            </figure>
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/primeira-camada/etapa-dois-primeira-camada2.png' %}" alt="Descendo" class="cubo_img" width="100%">
+            </figure>
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/primeira-camada/etapa-dois-primeira-camada3.png' %}" alt="Pronto" class="cubo_img" width="100%">
+            </figure>
+        </div>
+
+        <p>Faça isso para os quatro meios brancos e você terá uma cruz no lado branco.</p>
+
+        <figure class="cube_figure">
+            <img src="{% static 'website/img/primeira-camada/cruz-pronta.png' %}" alt="Pronto" class="cubo_img" width="100%">
+        </figure>
+
+        <div class="text-and-image">
+            <div class="text">
+                <h2>Etapa 3</h2>
+                <p>A última etapa para completar a primeira camada consiste em encaixar as quinas que possuem a cor branca em seus lugares.</p><br>
+                <p>Primeiro deixe a cruz feita no lado branco virada para baixo. Daqui para frente a cruz sempre ficará para baixo.</p><br>
+                <p>Agora, localize uma quina branca.</p>
+            </div>
+                
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/primeira-camada/quinas-exemplo1.png' %}" alt="Exemplo 1" class="cubo_img" id="etapa_3_img" width="100%">
+            </figure>
+        </div>
+
+        <div id="se_estiver_na_primeira">
+            <p style="font-weight: bold;">Se a quina que você localizou estiver na terceira camada do cubo (camada superior), como no exemplo acima, você deve pular esse quadro.</p><br>
+
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/primeira-camada/quina-inferior-1.png' %}" alt="" class="cubo_img" width="100%">
+            </figure><br>
+
+            <p>Se a quina que você localizou estiver na camada inferior, como nesse exemplo, execute a seguinte sequência:</p><br>
+
+            <div class="varias_imagens">
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/primeira-camada/quina-inferior-2.png' %}" alt="" class="cubo_img" width="100%">
+                    </figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/primeira-camada/quina-inferior-3.png' %}" alt="" class="cubo_img" width="100%">
+                    </figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/primeira-camada/quina-inferior-4.png' %}" alt="" class="cubo_img" width="100%">
+                    </figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/primeira-camada/quina-inferior-5.png' %}" alt="" class="cubo_img" width="100%">
+                    </figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/primeira-camada/quina-inferior-6.png' %}" alt="" class="cubo_img" width="100%">
+                    </figure>
+                    <figure class="cube_figure" style="background-color: rgba(0,0,0,0);"></figure>
+                </div>                
+            </div><br>
+
+            <p>Agora que a sua quina está na camada superior, pode seguir em frente.</p>
+        </div>
+
+        <div class="text-and-image">
+            <div class="text">
+                <p>A quina em que estamos trabalhando possui, além do branco, mais duas cores, você deve posicioná-la de forma que ela fique entre as cores que ela possui. Ou seja, se a quina for branca, verde e vermelha, gire a face superior até que ela fique entre os lados verde e vermelho:</p>
+            </div>
+            <figure id="figure_etapa_um_primeira_camada" class="cube_figure">
+                <img src="{% static 'website/img/primeira-camada/posicao-quina.png' %}" alt="" class="cubo_img" width="100%">
+            </figure>
+        </div>
+
+        <p>Lembrando que o “lado vermelho”, por exemplo é o lado que possui o centro vermelho. </p><br>
+        <p>Então você repetirá a mesma sequência de movimentos anterior, até que a peça esteja no lugar dela:</p>
+
+        <div class="varias_imagens" id="sexy">
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/primeira-camada/sexy1.png' %}" alt="" class="cubo_img" width="100%">
+                </figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/primeira-camada/sexy2.png' %}" alt="" class="cubo_img" width="100%">
+                </figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/primeira-camada/sexy3.png' %}" alt="" class="cubo_img" width="100%">
+                </figure>
+            </div>
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/primeira-camada/sexy4.png' %}" alt="" class="cubo_img" width="100%">
+                </figure>
+                <figure class="cube_figure" style="background-color: rgba(0,0,0,0);"></figure>
+                <figure class="cube_figure" style="background-color: rgba(0,0,0,0);"></figure>
+            </div>                
+        </div>
+
+        <p>Será necessário repetir essa sequência no máximo 5 vezes, até que a quina fique na posição correta:</p>
+
+        <figure class="cube_figure"><img src="{% static 'website/img/primeira-camada/quina-correta.png' %}" alt="" class="cubo_img" width="100%">
+        </figure>
+
+        <div class="text-and-image">
+            <div class="text">
+                <p>Pronto, uma quina já foi, faltam 3. Agora localize a próxima quina e repita o processo. Após  realizar o processo para as quatro quinas brancas, a sua primeira camada estará pronta.</p>
+            </div>
+            <figure id="figure_etapa_um_primeira_camada" class="cube_figure">
+                <img src="{% static 'website/img/primeira-camada/primeira-camada-pronta.png' %}" alt="" class="cubo_img" width="100%">
+            </figure>
+        </div>
+       
+        <div id="link_segunda_camada"><a href="{% url 'segunda_camada' %}">Segunda Camada ></a></div>
+    </div>
+
+    <div class="vertical_line"></div>
+</div>
+{% endblock content %}

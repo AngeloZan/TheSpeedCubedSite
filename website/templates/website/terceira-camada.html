@@ -1,0 +1,310 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/css/website.css' %}">
+    <title>Tutorial - TheSpeedCubed</title>
+    <meta name="description" content="Um tutorial simples, mas completo. Seguindo esses passos, qualquer pessoa é capaz de resolver o cubo mágico.">
+{% endblock head %}
+
+{% block content %}
+
+<div class="terceira-camada-container">
+
+    <div class="conteudo">
+        <h1>Terceira Camada</h1>
+        <div class="text-and-image">
+            <div class="text">
+                <h2>Etapa 1</h2>
+                <p>A nossa primeira etapa para resolver a terceira camada consiste em fazer uma cruz da cor amarela, como na figura.</p><br>
+                <p>Se, por acaso, seu cubo já estiver com a cruz amarela formada, você pode pular essa etapa.</p>
+            </div>
+            <figure class="cube_figure" style="margin-top: 0; margin-bottom: 0;">
+                <img src="{% static 'website/img/terceira-camada/cruz-amarela-pronta.png' %}" alt="Quinas de cima" width="100%" class="cube_img">
+            </figure>
+        </div>
+        <p>Olhe para as peças de meio da última camada, existem 3 possibilidades para a forma como elas estarão dispostas:</p>
+
+        <div class="imagens">
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/terceira-camada/nenhum-orientado.png' %}" alt="Quinas de cima" width="100%" class="cube_img">
+                <figcaption>Nenhum dos meios amarelos orientados</figcaption>
+            </figure>
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/terceira-camada/dois-orientados-l.png' %}" alt="Quinas de cima" width="100%" class="cube_img">
+                <figcaption>Dois meios amarelos orientados, formando um "L"</figcaption>
+            </figure>
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/terceira-camada/dois-orientados-linha.png' %}" alt="Quinas de cima" width="100%" class="cube_img">
+                <figcaption>Dois meios amarelos orientados, formando uma linha reta</figcaption>
+            </figure>
+        </div>
+
+        <div id="nenhum_meio_orientado">
+            <h3>Nenhum meio orientado</h3>
+            <div class="varias_imagens">
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-nenhum-orientado-1.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-nenhum-orientado-2.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-nenhum-orientado-3.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-nenhum-orientado-4.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-nenhum-orientado-5.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-nenhum-orientado-6.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure">
+                        <img src="{% static 'website/img/terceira-camada/seq-nenhum-orientado-pronto.png' %}" alt="Quinas de cima" width="100%" class="cube_img">
+                        <figcaption>Agora você caiu no caso de linha reta, que está explicado abaixo</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div id="dois_meios_linha">
+            <h3>Dois meios orientados em linha reta</h3>
+            <div class="varias_imagens">
+                <div class="imagens">
+                    <figure class="cube_figure">
+                            <img src="{% static 'website/img/terceira-camada/seq-linha-1.png' %}" alt="Quinas de cima" width="100%" class="cube_img">
+                            <figcaption>Deixe a linha amarela na horizontal</figcaption>
+                    </figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-linha-2.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-linha-3.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-linha-4.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-linha-5.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-linha-6.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-linha-7.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure">
+                        <img src="{% static 'website/img/terceira-camada/seq-linha-pronto.png' %}" alt="Quinas de cima" width="100%" class="cube_img">
+                        <figcaption>Pronto</figcaption>
+                    </figure>
+                    <figure class="cube_figure" style="background-color: rgba(0,0,0,0);"></figure>
+                </div>
+            </div>
+        </div>
+
+        <div id="dois_meios_l">
+            <h3>Dois meios orientados em "L"</h3>
+            <div class="varias_imagens">
+                <div class="imagens">
+                    <figure class="cube_figure">
+                            <img src="{% static 'website/img/terceira-camada/seq-l-1.png' %}" alt="Quinas de cima" width="100%" class="cube_img">
+                            <figcaption>Deixe o "L" posicionado dessa forma</figcaption>
+                    </figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-l-2.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-l-3.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-l-4.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-l-5.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-l-6.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                </div>
+                <div class="imagens">
+                    <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/seq-l-7.png' %}" alt="Quinas de cima" width="100%" class="cube_img"></figure>
+                    <figure class="cube_figure">
+                        <img src="{% static 'website/img/terceira-camada/seq-l-pronto.png' %}" alt="Quinas de cima" width="100%" class="cube_img">
+                        <figcaption>Pronto</figcaption>
+                    </figure>
+                    <figure class="cube_figure" style="background-color: rgba(0,0,0,0);"></figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-and-image">
+            <div class="text">
+                <h2>Etapa 2</h2>
+                <p>A nossa segunda etapa consiste em completar a face amarela.</p><br>
+                <p>Para facilitar, vamos utilizar apenas uma sequência de movimentos, repetindo-a até 3 vezes.</p>
+            </div>
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/terceira-camada/oll-concluida.png' %}" alt="OLL concluída" width="100%" class="cube_img">
+            </figure>
+        </div>
+
+        <div class="text-and-image">
+            <div class="text">
+                <p>Primeiro, conte quantos adesivos amarelos estão ao redor da cruz.</p><br>
+                <p>Você irá segurar o cubo de uma forma diferente dependendo de quantos adesivos houverem, e então fará uma sequência de movimentos.</p><br>
+                <p>Importante: você irá realizar a sequência e cairá em outro caso (número diferente de adesivos ao redor da cruz), então você irá segurar o cubo da forma indicada para esse novo número de adesivos e repetirá a sequência. Repita esse processo até que a face amarela esteja resolvida.</p>
+            </div>
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/terceira-camada/um-adesivo-ex.png' %}" alt="Exemplo: um adesivo." width="100%" class="cube_img">
+                <figcaption>Nesse exemplo, existe um adesivo amarelo ao redor da cruz. (Marcado com um asterisco)</figcaption>
+            </figure>
+        </div>
+
+        <div class="imagens">
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/terceira-camada/um-adesivo-posicao.png' %}" alt="Um adesivo." width="100%" class="cube_img">
+                <figcaption>Se houver apenas um adesivo amarelo, segure o cubo de forma que esse adesivo fique ao lado esquedo do cubo, na parte da frente.</figcaption>
+            </figure>
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/terceira-camada/nenhum-adesivo-posicao.png' %}" alt="Nenhum adesivo." width="100%" class="cube_img">
+                <figcaption>Se não houver nenhum adesivo, segure o cubo de forma que haja um adesivo amarelo na posição indicada na imagem. (Face da esquerda, parte da frente)</figcaption>
+            </figure>
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/terceira-camada/dois-adesivos-posicao.png' %}" alt="Dois adesivos." width="100%" class="cube_img">
+                <figcaption>Se houver dois adesivos, segure o cubo de forma que haja um adesivo amarelo na posição indicada na imagem. (Face da frente, parte da esquerda)</figcaption>
+            </figure>
+        </div>
+
+        <p>Agora, execute essa sequência:</p><br>
+
+        <div class="varias_imagens">
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/sune-1.png' %}" alt="Sune 1" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/sune-2.png' %}" alt="Sune 2" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/sune-3.png' %}" alt="Sune 3" width="100%" class="cube_img"></figure>
+            </div>
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/sune-4.png' %}" alt="Sune 4" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/sune-5.png' %}" alt="Sune 5" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure">
+                    <img src="{% static 'website/img/terceira-camada/sune-6.png' %}" alt="Sune 6" width="100%" class="cube_img">
+                    <figcaption><b>Atenção</b>: esse movimento é de 180°</figcaption>
+                </figure>
+            </div>
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/sune-7.png' %}" alt="Sune 7" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure">
+                    <img src="{% static 'website/img/terceira-camada/sune-pronto.png' %}" alt="Sune pronto" width="100%" class="cube_img">
+                    <figcaption>Pronto</figcaption>
+                </figure>
+                <figure class="cube_figure" style="background-color: rgba(0,0,0,0);"></figure>
+            </div>
+        </div>
+
+        <div class="horizontal_line" id="horizontal_line_1"></div>
+
+        <div class="text-and-image">
+            <div class="text">
+                <h3>Etapa 3</h3>
+                <p>A nossa terceira etapa consiste em permutar as peças de quina, colocando cada uma em seu lugar.</p><br>
+                <p>Para isso usaremos uma única sequência de movimentos.</p>
+            </div>
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/terceira-camada/quinas-completas.png' %}" alt="Quinas resolvidas" width="100%" class="cube_img">
+            </figure>
+        </div>
+
+        <p>Primeiramente, localize uma face que possua os dois adesivos indicados com as setas da mesma cor.</p>
+
+        <figure class="cube_figure">
+            <img src="{% static 'website/img/terceira-camada/l-posicao.png' %}" alt="Adesivos da mesma cor" width="100%" class="cube_img">
+        </figure>
+
+        <p>Pode ser que não haja nenhuma face assim. Se esse for o caso, apenas execute a sequência de movimentos que será mostrada a seguir (não precisa segurar o cubo de uma forma específica, desde que o lado amarelo esteja para cima), e então haverá uma face que possua os dois adesivos indicados da mesma cor.</p><br>
+        <p>Agora segure o cubo de forma que essa face com os dois adesivos da mesma cor esteja ao lado direito do cubo, como na figura.</p>
+
+        <figure class="cube_figure">
+            <img src="{% static 'website/img/terceira-camada/lightspot-direita.png' %}" alt="Adesivos da mesma cor ao lado direito" width="100%" class="cube_img">
+        </figure>
+
+        <p>Pronto, só falta executar a sequência:</p><br>
+
+        <div class="varias_imagens">
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/l-1.png' %}" alt="L 1" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/l-2.png' %}" alt="L 2" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/l-3.png' %}" alt="L 3" width="100%" class="cube_img"></figure>
+            </div>
+            <div class="imagens">
+                <figure class="cube_figure">
+                    <img src="{% static 'website/img/terceira-camada/l-4.png' %}" alt="L 4" width="100%" class="cube_img">
+                    <figcaption><b>Atenção</b>: esse movimento é de 180°</figcaption>
+                </figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/l-5.png' %}" alt="L 5" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/l-6.png' %}" alt="L 6" width="100%" class="cube_img"></figure>
+            </div>
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/l-7.png' %}" alt="L 7" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure">
+                    <img src="{% static 'website/img/terceira-camada/l-8.png' %}" alt="L 8" width="100%" class="cube_img">
+                    <figcaption><b>Atenção</b>: esse movimento é de 180°</figcaption>
+                </figure>
+                <figure class="cube_figure">
+                    <img src="{% static 'website/img/terceira-camada/l-9.png' %}" alt="L 9" width="100%" class="cube_img">
+                    <figcaption><b>Atenção</b>: esse movimento é de 180°</figcaption>
+                </figure>
+            </div>
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/l-10.png' %}" alt="L Pronto" width="100%" class="cube_img"></figure>
+            </div>
+        </div>
+
+        <div class="horizontal_line"></div>
+
+        <div class="text-and-image" id="text-and-image_etapa_4">
+            <div class="text">
+                <h3>Etapa 4</h3>
+                <p>Por fim, na nossa quarta etapa, vamos finalizar o cubo.</p><br>
+                <p>Para isso, novamente, usaremos uma única sequência de movimentos.</p>
+            </div>
+            <figure class="cube_figure">
+                <img src="{% static 'website/img/terceira-camada/cubo-pronto.png' %}" alt="Cubo resolvido" width="100%" class="cube_img">
+            </figure>
+        </div>
+
+        <p>Comece localizando uma face que possui os 3 adesivos de cima da mesma cor.</p>
+
+        <figure class="cube_figure">
+            <img src="{% static 'website/img/terceira-camada/tres-adesivos.png' %}" alt="3 adesivos" width="100%" class="cube_img">
+        </figure>
+
+        <p>Se não houver uma face assim, apenas faça a sequência que será mostrada a seguir (não precisa segurar o cubo de uma forma específica, desde que o lado amarelo esteja para cima), e surgirá uma face assim.</p><br>
+
+        <p>Agora, segure o cubo de forma que a face com os 3 adesivos da mesma cor fique na frente.</p><br>
+
+        <figure class="cube_figure">
+            <img src="{% static 'website/img/terceira-camada/tres-adesivos-frente.png' %}" alt="3 adesivos iguais na frente." width="100%" class="cube_img">
+        </figure>
+
+        <p>Finalmente, execute a sequência:</p><br>
+
+        <div class="varias_imagens">
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/u-1.png' %}" alt="U 1" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/u-2.png' %}" alt="U 2" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/u-3.png' %}" alt="U 3" width="100%" class="cube_img"></figure>
+            </div>
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/u-4.png' %}" alt="U 4" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/u-5.png' %}" alt="U 5" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/u-6.png' %}" alt="U 6" width="100%" class="cube_img"></figure>
+            </div>
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/u-7.png' %}" alt="U 7" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/u-8.png' %}" alt="U 8" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/u-9.png' %}" alt="U 9" width="100%" class="cube_img"></figure>
+            </div>
+            <div class="imagens">
+                <figure class="cube_figure"><img src="{% static 'website/img/terceira-camada/u-10.png' %}" alt="U 10" width="100%" class="cube_img"></figure>
+                <figure class="cube_figure">
+                    <img src="{% static 'website/img/terceira-camada/u-11.png' %}" alt="U 11" width="100%" class="cube_img">
+                    <figcaption><b>Atenção</b>: esse movimento é de 180°</figcaption>
+                </figure>
+                <figure class="cube_figure">
+                    <img src="{% static 'website/img/terceira-camada/tres-adesivos-frente.png' %}" alt="3 adesivos iguais na frente." width="100%" class="cube_img">
+                </figure>
+            </div>
+        </div><br>
+
+        <p>É possível que o seu cubo ainda não esteja resolvido. Se esse for o caso, apenas execute novamente a sequência, tomando cuidado com a forma de segurar o cubo (3 adesivos iguais na frente).</p><br>
+        <p>Pronto! Seu cubo deve estar resolvido agora, talvez seja necessário girar a última camada para alinhá-la.</p>
+
+        <figure class="cube_figure">
+            <img src="{% static 'website/img/terceira-camada/cubo-pronto.png' %}" alt="Cubo resolvido" width="100%" class="cube_img">
+        </figure>
+
+    </div>
+
+    <div class="vertical_line"></div>
+</div>
+
+{% endblock content %}
